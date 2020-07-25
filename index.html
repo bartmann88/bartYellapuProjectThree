@@ -4,38 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css">
-    <script src="/app.js"></script>
+    <link rel="stylesheet" href="styles\style.css">
+   
     <title>☠️☠️ LOTR QUIZ ☠️☠️</title>
 </head>
 
 <body>
 
-    <section>
 
-        <header>
+    <header>
 
-            <div class="headerContainer">
-                <h1>Super Hard Lord Of The Rings Quiz</h1>
+        <div class="headerContainer">
+            <h1>Super Hard Lord Of The Rings Quiz</h1>
 
-                <p>ridiculously hard lord of the rings quiz.</p>
-                <p> “You have been chosen, and you must therefore use such strength and heart and wits as you have.” - J.R.R. TOLKIEN </p>
-                <p> True Nerd Only!! Think you have what it takes??</p>
-                <a href="#" class="buttonStart" id="startQuiz">Start!</a>
-            
+            <p>ridiculously hard lord of the rings quiz.</p>
+            <p> “You have been chosen, and you must therefore use such strength and heart and wits as you have.” -
+                J.R.R. TOLKIEN </p>
+            <p> True Nerd Only!! Think you have what it takes??</p>
+
+            <a href="#" class="buttonStart" id="startQuiz">Start!</a>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="quiz">
+
+            <p class="questionsleft" id="questionsleft"></p>
+
+            <div class="questionContainer">
+                <h3 class="question" id="question">q</h3>
+
+                <div class="options" id="options">
+                    <p>OPtion1</p>
+                    <p>OPtion2</p>
+                    <p>OPtion</p>
+                    <p>OPtion4</p>
+
+                </div>
+
             </div>
 
-        </header>
+            <button class="nextButton" id="nextButton">Next</button>
+        </div>
 
+        <div class="scoreContainer">
+            <p class="result" id="result">W/R</p>
+            <p class="score" id="score">1</p>
+        </div>
+
+    </main>
+
+    <section class="resultPage" id="resultPage">
+
+        <p class="score" id="finalScore">11</p>
+        <p class="finalMessage" id="finalMessage"></p>
     </section>
 
+    <!-- <footer>
+            <div class="bottomFooter">
+                <p>By Bharat</p>
+            </div>
+        </footer> -->
 
 
+    <!-- Jquery CDN -->
 
-<!-- Jquery CDN -->
- 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   
+    <script src="app.js"></script>
 </body>
 
 </html>
