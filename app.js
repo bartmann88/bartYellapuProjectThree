@@ -82,7 +82,7 @@ let score = 0;
 
 
 const showQuestion = function() {
-    $('#question').append(quizContent[questionNumber].question)
+    $('#question').text(quizContent[questionNumber].question)
     // console.log(quizContent[questionNumber].question);
 }
 
@@ -96,13 +96,25 @@ const showOptions = function(){
 
 // function created to check answers
 const checkAnswer = function (selectedAnswer){
-    console.log(selectedAnswer);
+
+    $('#nextButton').show()
     if (selectedAnswer === quizContent[questionNumber].correctAnswer ){
         console.log("correct anser");
     }
     else{
         console.log("wrong");
     }
+}
+
+const nextQuestion = function (){
+    questionNumber = ++questionNumber;
+    showQuestion();
+    $("#optionsContainer").html("")
+    showOptions();
+    $('#optionsContainer').children("p").click(function () {
+        checkAnswer($(this).text())
+    })
+    
 }
 
 
@@ -112,6 +124,7 @@ const checkAnswer = function (selectedAnswer){
 $(function () {
     $('main').hide();
     $('#startQuiz').on('click',function() {
+        $('#nextButton').hide()
         $('.headerContainer').remove();
         $('main').show();
         showQuestion();
@@ -122,6 +135,12 @@ $(function () {
         $('#optionsContainer').children("p").click(function(){
             checkAnswer($(this).text())
         })
+
+        $('#nextButton').click(function(){
+            nextQuestion();
+        })
+
+
     })
 });
 
