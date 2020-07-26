@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles\style.css">
-   
+
     <title>☠️☠️ LOTR QUIZ ☠️☠️</title>
 </head>
 
@@ -32,17 +32,11 @@
 
         <div class="quiz">
 
-            <p class="questionsleft" id="questionsleft"></p>
-
             <div class="questionContainer">
                 <h3 class="question" id="question">q</h3>
 
                 <div class="options" id="options">
-                    <p>OPtion1</p>
-                    <p>OPtion2</p>
-                    <p>OPtion</p>
-                    <p>OPtion4</p>
-
+                    <ul id="optioncontainer"></ul>
                 </div>
 
             </div>
@@ -55,19 +49,22 @@
             <p class="score" id="score">1</p>
         </div>
 
+        <section class="resultPage" id="resultPage">
+
+            <p class="score" id="finalScore">11</p>
+            <p class="finalMessage" id="finalMessage"></p>
+
+        </section>
+
     </main>
 
-    <section class="resultPage" id="resultPage">
 
-        <p class="score" id="finalScore">11</p>
-        <p class="finalMessage" id="finalMessage"></p>
-    </section>
 
-    <!-- <footer>
-            <div class="bottomFooter">
-                <p>By Bharat</p>
-            </div>
-        </footer> -->
+    <footer>
+        <div class="bottomFooter">
+            <p>By Bharat</p>
+        </div>
+    </footer>
 
 
     <!-- Jquery CDN -->
