@@ -27,11 +27,6 @@ const quizContent = [
         "correctAnswer": "210"
     },
 
-    {
-        "question": "Which River Is Rivendell Built On 5?",
-        "options": ["147", "107", "87", "210"],
-        "correctAnswer": "210"
-    },
 
     {
         "question": "Which Of These Is A 'Pipe-Weed' from The Shire 6?",
@@ -69,14 +64,53 @@ const quizContent = [
 
 // ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const lotrApp = {};
+// const lotrApp = {};
 
 // Start Button - Hide HeaderContainer ✔ - Button should also unhide the quiz container XX
 
 $('#startQuiz').on('click',function() {
     $('.headerContainer').remove();
     $('main').show();
+    showQuestion();
+    showOptions();
 })
+
+// Key Variables
+
+// This variable will tell us where we are on the Quizcontent array
+let questionNumber = 0;
+
+let totalQuestion = quizContent.length ;
+
+let score = 0;
+
+// this funtion will show a question on hTML
+
+
+const showQuestion = function() {
+    $('#question').append(quizContent[questionNumber].question)
+    // console.log(quizContent[questionNumber].question);
+}
+
+const showOptions = function(){
+    (quizContent[questionNumber].options).map((option) => {
+        $("#optionsContainer").append("<p>" + option + "</p>")
+    })
+    // console.log(quizContent[questionNumber].options);
+}
+
+
+// function created to check answers
+const checkAnswer = function (selectedAnswer){
+    if (selectedAnswer === quizContent[questionNumber].correctAnswer ){
+        console.log("correct anser");
+    }
+    else{
+        console.log("wrong");
+    }
+}
+
+
 
 
 $(function () {
