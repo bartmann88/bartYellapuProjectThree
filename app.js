@@ -84,6 +84,9 @@ let score = 0;
 const showQuestion = function() {
     $('#question').text(quizContent[questionNumber].question)
     // console.log(quizContent[questionNumber].question);
+    // Hide next button when new question is unanswered
+    $('#nextButton').hide()
+
 }
 
 const showOptions = function(){
@@ -100,21 +103,39 @@ const checkAnswer = function (selectedAnswer){
     $('#nextButton').show()
     if (selectedAnswer === quizContent[questionNumber].correctAnswer ){
         console.log("correct anser");
+        // Updating Score
+        score = ++score
+        $('#score').text(`Score - ${score}`)
+        $('#result').text('Well Done')
     }
     else{
         console.log("wrong");
+        $('#result').text('Wrong')
     }
 }
 
+
+
+const gameOver = function (){
+    $('#finalMessage').text ('GAME OVER! - Try Again')
+    $("main").hide()
+    $("header").hide()
+    $("#finalScore").text(`Your Score is ${score}`)
+}
+
 const nextQuestion = function (){
-    questionNumber = ++questionNumber;
-    showQuestion();
-    $("#optionsContainer").html("")
-    showOptions();
-    $('#optionsContainer').children("p").click(function () {
-        checkAnswer($(this).text())
-    })
-    
+    if(quizContent.length-1 === questionNumber) {
+        gameOver()
+    } else {
+        questionNumber = ++questionNumber;
+        showQuestion();
+        $("#optionsContainer").html("")
+        showOptions();
+        $('#optionsContainer').children("p").click(function () {
+            checkAnswer($(this).text())
+        })
+        $('#result').text("")
+    }
 }
 
 
@@ -127,6 +148,7 @@ $(function () {
         $('#nextButton').hide()
         $('.headerContainer').remove();
         $('main').show();
+        $('#score').text(`Score - ${score}`)
         showQuestion();
         showOptions();
 
