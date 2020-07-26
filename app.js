@@ -68,12 +68,6 @@ const quizContent = [
 
 // Start Button - Hide HeaderContainer ✔ - Button should also unhide the quiz container XX
 
-$('#startQuiz').on('click',function() {
-    $('.headerContainer').remove();
-    $('main').show();
-    showQuestion();
-    showOptions();
-})
 
 // Key Variables
 
@@ -102,6 +96,7 @@ const showOptions = function(){
 
 // function created to check answers
 const checkAnswer = function (selectedAnswer){
+    console.log(selectedAnswer);
     if (selectedAnswer === quizContent[questionNumber].correctAnswer ){
         console.log("correct anser");
     }
@@ -113,8 +108,21 @@ const checkAnswer = function (selectedAnswer){
 
 
 
+
 $(function () {
     $('main').hide();
+    $('#startQuiz').on('click',function() {
+        $('.headerContainer').remove();
+        $('main').show();
+        showQuestion();
+        showOptions();
+
+        // we are selecting all the elements within the OptionsContainer div
+        
+        $('#optionsContainer').children("p").click(function(){
+            checkAnswer($(this).text())
+        })
+    })
 });
 
 
