@@ -64,10 +64,7 @@ const quizContent = [
 
 // ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// const lotrApp = {};
-
 // Start Button - Hide HeaderContainer ✔ - Button should also unhide the quiz container XX
-
 
 // Key Variables
 
@@ -78,49 +75,44 @@ let totalQuestion = quizContent.length ;
 
 let score = 0;
 
-// this funtion will show a question on hTML
 
+// this funtion will show a question on hTML
 
 const showQuestion = function() {
     $('#question').text(quizContent[questionNumber].question)
     // console.log(quizContent[questionNumber].question);
     // Hide next button when new question is unanswered
     $('#nextButton').hide()
-
 }
 
 const showOptions = function(){
     (quizContent[questionNumber].options).map((option) => {
-        $("#optionsContainer").append("<p>" + option + "</p>")
+        $("#optionsContainer").append("<p  class='option'>" + option + "</p>")
     })
     // console.log(quizContent[questionNumber].options);
 }
 
-
 // function created to check answers
 const checkAnswer = function (selectedAnswer){
+    $("#optionsContainer").children("p").attr("class", "disabled-btn")
 
     $('#nextButton').show()
     if (selectedAnswer === quizContent[questionNumber].correctAnswer ){
+        
         console.log("correct anser");
         // Updating Score
         score = ++score
         $('#score').text(`Score - ${score}`)
-        $('#result').text('Well Done')
+        $('#result').text('Well Done').attr("class", "correct")
+        // Updating CSS
+        
     }
+    
     else{
         console.log("wrong");
-        $('#result').text('Wrong')
+        $('#result').text('Wrong').attr("class","wrong")
+        
     }
-}
-
-
-
-const gameOver = function (){
-    $('#finalMessage').text ('GAME OVER! - Try Again')
-    $("main").hide()
-    $("header").hide()
-    $("#finalScore").text(`Your Score is ${score}`)
 }
 
 const nextQuestion = function (){
@@ -133,9 +125,51 @@ const nextQuestion = function (){
         showOptions();
         $('#optionsContainer').children("p").click(function () {
             checkAnswer($(this).text())
+            
         })
         $('#result').text("")
     }
+}
+
+// Game over function
+
+const gameOver = function (){
+    $('#finalMessage').text ('GAME OVER! - Try Again')
+    $("main").hide()
+    $("header").hide()
+    $("#finalScore").text(`Your Score is ${score}`)
+    $('#resetButton').show().click(function(){
+        resetGame()
+    })
+}
+
+const resetGame = function(){
+    score = 0;
+    questionNumber= 0;
+    $('#nextButton').hide()
+    $('#finalMessage').text("")
+    $("#finalScore").text("")
+    $("#resetButton").hide()
+    $('main').show();
+    $('#score').text(`Score - ${score}`)
+    showQuestion();
+    
+    $('#optionsContainer').html("")
+    showOptions();
+    $('#result').text("")
+    $('#optionsContainer').children("p").click(function () {
+        checkAnswer($(this).text())
+    })
+    if(questionNumber === quizContent.length-1) {
+        gameOver()
+       
+    }
+    
+
+    
+   
+
+   
 }
 
 
@@ -143,10 +177,12 @@ const nextQuestion = function (){
 
 
 $(function () {
-    $('main').hide();
+    $('main').hide(); 
+    $('#resetButton').hide();
     $('#startQuiz').on('click',function() {
         $('#nextButton').hide()
         $('.headerContainer').remove();
+        $('header').remove();
         $('main').show();
         $('#score').text(`Score - ${score}`)
         showQuestion();
@@ -158,13 +194,14 @@ $(function () {
             checkAnswer($(this).text())
         })
 
-        $('#nextButton').click(function(){
+        $('#nextButton').click(function () {
             nextQuestion();
+        })   
+         
         })
 
-
     })
-});
+
 
 
 

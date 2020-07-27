@@ -1,3 +1,30 @@
 h3 {
   color: red;
 }
+
+.option {
+  background-color: blue;
+  color: white;
+  width: 30%;
+}
+
+.correct {
+  background-color: greenyellow;
+}
+
+.wrong {
+  background-color: crimson;
+}
+
+header {
+  height: 90vh;
+  background-image: url(../assets/images/map.jpg);
+}
+
+.disabled-btn {
+  pointer-events: none;
+  background-color: blue;
+  opacity: 0.5;
+  color: white;
+  width: 30%;
+}
