@@ -4,50 +4,50 @@
 const quizContent = [
 
     {
-        "question": "What Are The Spawn Of Ungoliant 1?",
+        "question": "What Are The Spawn Of Ungoliant ?",
         "options": ["Giant Spiders", "Orcs", "Goblins", "Wargs"],
         "correctAnswer": "Giant Spiders"
     },
 
     {
-        "question": "What Is The Elven Name For Hobbits 2 ?",
+        "question": "What Is The Elven Name For Hobbits ?",
         "options": ["Mellon", "The Periannath", "Dunedian", "Nogoth"],
         "correctAnswer": "The Periannath"
     },
 
     {
-        "question": "How Many Rings Of Power Were Forged 3?",
+        "question": "How Many Rings Of Power Were Forged ?",
         "options": ["10","18","21", "20"],
         "correctAnswer": "20"
     },
 
     {
-        "question": "How Old Was Aragorn When He Was Laid To Rest 4?",
+        "question": "How Old Was Aragorn When He Was Laid To Rest ?",
         "options": ["147", "107", "87", "210"],
         "correctAnswer": "210"
     },
 
 
     {
-        "question": "Which Of These Is A 'Pipe-Weed' from The Shire 6?",
+        "question": "Which Of These Is A 'Pipe-Weed' from The Shire ?",
         "options": ["The Golden Perch", "The Green Dragon", "The Prancing Pony", "The Southern Star"],
         "correctAnswer": "The Southern Star"
     },
 
     {
-        "question": "What Sindarin Word was Aragon Known By 7?",
+        "question": "What Sindarin Word was Aragon Known By ?",
         "options": ["Estel", "Amdir", "Aeluin", "Miriel"],
         "correctAnswer": "Estel"
     },
 
     {
-        "question": "What Are 'Durin's Folk' Known As In The Common Tongue 8?",
+        "question": "What Are 'Durin's Folk' Known As In The Common Tongue ?",
         "options": ["Hobbits", "Forest Elves", "Men Of Rohan", "Dwarves"],
         "correctAnswer": "Dwarves"
     },
 
     {
-        "question": "Which Hobbit Does BIlbo Share His Birthday With 9?",
+        "question": "Which Hobbit Does BIlbo Share His Birthday With ?",
         "options": ["Sam", "Frodo", "Merry", "Pipin"],
         "correctAnswer": "Pipin"
     },
@@ -164,12 +164,6 @@ const resetGame = function(){
         gameOver()
        
     }
-    
-
-    
-   
-
-   
 }
 
 

@@ -1,30 +1,174 @@
 h3 {
-  color: red;
+  color: darkslategray;
+  font-family: 'IM Fell English', serif;
+  font-size: 30px;
 }
 
 .option {
-  background-color: blue;
-  color: white;
-  width: 30%;
+  color: black;
+  width: 10%;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: 'Piedra', cursive;
+  text-align: center;
 }
 
 .correct {
-  background-color: greenyellow;
+  color: greenyellow;
+  font-family: 'IM Fell English', serif;
+  font-size: 50px;
+  font-weight: 900;
 }
 
 .wrong {
-  background-color: crimson;
+  color: crimson;
+  font-family: 'IM Fell English', serif;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+body {
+  background-color: black;
 }
 
 header {
+  background-image: url(../assets/images/landingBackground.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 90vh;
-  background-image: url(../assets/images/map.jpg);
+}
+
+.headerContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  width: 60%;
+  margin-top: 15%;
+}
+
+.heading {
+  margin-bottom: 25px;
+  font-family: 'IM Fell English', serif;
+  font-size: 50px;
+  color: #e8b923;
+}
+
+.landingText {
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.buttonStart {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: silver;
+  padding: 4px 20px;
+  border-radius: 10px;
+  font-family: 'Piedra', cursive;
+}
+
+.buttonStart:hover {
+  color: white;
 }
 
 .disabled-btn {
   pointer-events: none;
-  background-color: blue;
   opacity: 0.5;
   color: white;
   width: 30%;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-image: url(../assets/images/7z6cSaI-lord-of-the-rings-wallpaper-hd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 95vh;
+}
+
+.optionsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.optionsContainer p {
+  cursor: pointer;
+  text-align: center;
+  padding: 2px;
+}
+
+.resultPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
+.quiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 75%;
+  background-color: gainsboro;
+  padding-bottom: 2%;
+  margin-top: 10%;
+}
+
+.score {
+  color: floralwhite;
+  font-family: 'bilbo';
+  font-weight: 900;
+  font-size: 30px;
 }
