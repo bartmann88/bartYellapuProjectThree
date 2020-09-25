@@ -75,7 +75,6 @@ let totalQuestion = quizContent.length ;
 
 let score = 0;
 
-
 // this funtion will show a question on hTML
 
 const showQuestion = function() {
@@ -101,7 +100,7 @@ const checkAnswer = function (selectedAnswer){
         
         console.log("correct anser");
         // Updating Score
-        score = ++score
+        // score = ++score
         $('#score').text(`Score - ${score}`)
         $('#result').text('Well Done').attr("class", "correct")
         // Updating CSS
@@ -109,7 +108,7 @@ const checkAnswer = function (selectedAnswer){
     }
     
     else{
-        console.log("wrong");
+        // console.log("wrong");
         $('#result').text('Wrong').attr("class","wrong")
         
     }
@@ -153,7 +152,7 @@ const resetGame = function(){
     $('main').show();
     $('#score').text(`Score - ${score}`)
     showQuestion();
-    
+
     $('#optionsContainer').html("")
     showOptions();
     $('#result').text("")
@@ -162,12 +161,8 @@ const resetGame = function(){
     })
     if(questionNumber === quizContent.length-1) {
         gameOver()
-       
     }
 }
-
-
-
 
 
 $(function () {

@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles\style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bilbo&family=IM+Fell+English:ital@1&family=Piedra&display=swap"
-        rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles\style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bilbo&family=IM+Fell+English:ital@1&family=Piedra&display=swap"
+      rel="stylesheet"
+    />
 
     <title>☠️☠️ LOTR QUIZ ☠️☠️</title>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <header>
+      <div class="headerContainer">
+        <h1 class="heading">Super Hard Lord Of The Rings Quiz</h1>
 
-        <div class="headerContainer">
-            <h1 class="heading">Super Hard Lord Of The Rings Quiz</h1>
-    
-            <a href="#" class="buttonStart" id="startQuiz">Start</a>
-
-        </div>
-
+        <a href="#" class="buttonStart" id="startQuiz">Start</a>
+      </div>
     </header>
 
     <main>
+      <div class="quiz">
+        <div class="questionContainer">
+          <h3 class="question" id="question"></h3>
 
-        <div class="quiz">
-
-            <div class="questionContainer">
-                <h3 class="question" id="question"></h3>
-
-                <div class="optionsContainer" id="optionsContainer">
-
-                </div>
-
-            </div>
-
-            <button id='nextButton'>Next</button>
+          <div class="optionsContainer" id="optionsContainer"></div>
         </div>
 
-        <div class="scoreContainer">
-            <p class="result" id="result"></p>
-            <p class="score" id="score"></p>
-        </div>
+        <button id="nextButton">Next</button>
+      </div>
 
-
+      <div class="scoreContainer">
+        <p class="result" id="result"></p>
+        <p class="score" id="score"></p>
+      </div>
     </main>
 
     <section class="resultPage" id="resultPage">
-
-        <p class="score" id="finalScore"></p>
-        <p class="finalMessage" id="finalMessage"></p>
-        <button id="resetButton">Try Again</button>
+      <p class="score" id="finalScore"></p>
+      <p class="finalMessage" id="finalMessage"></p>
+      <button id="resetButton">Try Again</button>
     </section>
 
-
     <!-- Jquery CDN -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
