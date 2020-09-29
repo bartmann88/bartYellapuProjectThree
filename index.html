@@ -29,7 +29,7 @@
           <div class="optionsContainer" id="optionsContainer"></div>
         </div>
 
-        <button id="nextButton">Next</button>
+        <button class="nextBtn" id="nextButton">Next</button>
       </div>
 
       <div class="scoreContainer">
@@ -39,9 +39,11 @@
     </main>
 
     <section class="resultPage" id="resultPage">
-      <p class="score" id="finalScore"></p>
-      <p class="finalMessage" id="finalMessage"></p>
-      <button id="resetButton">Try Again</button>
+      <div class="resultContainer">
+        <p class="score" id="finalScore"></p>
+        <p class="finalMessage" id="finalMessage"></p>
+        <button id="resetButton">Try Again</button>
+      </div>
     </section>
 
     <!-- Jquery CDN -->
@@ -50,7 +52,6 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"
     ></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
     <script src="app.js"></script>
   </body>
 </html>

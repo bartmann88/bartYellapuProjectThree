@@ -1,59 +1,59 @@
-
 // Create a variable for all the quiz with objects within an array
 
 const quizContent = [
+  {
+    question: "What Are The Spawn Of Ungoliant ?",
+    options: ["Giant Spiders", "Orcs", "Goblins", "Wargs"],
+    correctAnswer: "Giant Spiders",
+  },
 
-    {
-        "question": "What Are The Spawn Of Ungoliant ?",
-        "options": ["Giant Spiders", "Orcs", "Goblins", "Wargs"],
-        "correctAnswer": "Giant Spiders"
-    },
+  {
+    question: "What Is The Elven Name For Hobbits ?",
+    options: ["Mellon", "The Periannath", "Dunedian", "Nogoth"],
+    correctAnswer: "The Periannath",
+  },
 
-    {
-        "question": "What Is The Elven Name For Hobbits ?",
-        "options": ["Mellon", "The Periannath", "Dunedian", "Nogoth"],
-        "correctAnswer": "The Periannath"
-    },
+  {
+    question: "How Many Rings Of Power Were Forged ?",
+    options: ["10", "18", "21", "20"],
+    correctAnswer: "20",
+  },
 
-    {
-        "question": "How Many Rings Of Power Were Forged ?",
-        "options": ["10","18","21", "20"],
-        "correctAnswer": "20"
-    },
+  {
+    question: "How Old Was Aragorn When He Was Laid To Rest ?",
+    options: ["147", "107", "87", "210"],
+    correctAnswer: "210",
+  },
 
-    {
-        "question": "How Old Was Aragorn When He Was Laid To Rest ?",
-        "options": ["147", "107", "87", "210"],
-        "correctAnswer": "210"
-    },
+  {
+    question: "Which Of These Is a 'Pipe-Weed' from The Shire ?",
+    options: [
+      "The Golden Perch",
+      "The Green Dragon",
+      "The Prancing Pony",
+      "The Southern Star",
+    ],
+    correctAnswer: "The Southern Star",
+  },
 
+  {
+    question: "What Sindarin Word was Aragon Known By ?",
+    options: ["Estel", "Amdir", "Aeluin", "Miriel"],
+    correctAnswer: "Estel",
+  },
 
-    {
-        "question": "Which Of These Is A 'Pipe-Weed' from The Shire ?",
-        "options": ["The Golden Perch", "The Green Dragon", "The Prancing Pony", "The Southern Star"],
-        "correctAnswer": "The Southern Star"
-    },
+  {
+    question: "What Are 'Durin's Folk' Known As In The Common Tongue ?",
+    options: ["Hobbits", "Forest Elves", "Men Of Rohan", "Dwarves"],
+    correctAnswer: "Dwarves",
+  },
 
-    {
-        "question": "What Sindarin Word was Aragon Known By ?",
-        "options": ["Estel", "Amdir", "Aeluin", "Miriel"],
-        "correctAnswer": "Estel"
-    },
-
-    {
-        "question": "What Are 'Durin's Folk' Known As In The Common Tongue ?",
-        "options": ["Hobbits", "Forest Elves", "Men Of Rohan", "Dwarves"],
-        "correctAnswer": "Dwarves"
-    },
-
-    {
-        "question": "Which Hobbit Does BIlbo Share His Birthday With ?",
-        "options": ["Sam", "Frodo", "Merry", "Pipin"],
-        "correctAnswer": "Pipin"
-    },
-
+  {
+    question: "Which Hobbit Does Bilbo Share His Birthday With ?",
+    options: ["Sam", "Frodo", "Merry", "Pipin"],
+    correctAnswer: "Pipin",
+  },
 ];
-
 
 // •	Landing page will have a heading and, description of the quiz and a challenge message
 // •	“Start Quiz “ Button will start the quiz and hide the landing page
@@ -71,128 +71,133 @@ const quizContent = [
 // This variable will tell us where we are on the Quizcontent array
 let questionNumber = 0;
 
-let totalQuestion = quizContent.length ;
+let totalQuestion = quizContent.length;
 
 let score = 0;
 
-// this funtion will show a question on hTML
+// this function will show a question on hTML
 
-const showQuestion = function() {
-    $('#question').text(quizContent[questionNumber].question)
-    // console.log(quizContent[questionNumber].question);
-    // Hide next button when new question is unanswered
-    $('#nextButton').hide()
-}
+const showQuestion = function () {
+  $("#question").text(quizContent[questionNumber].question);
+  // console.log(quizContent[questionNumber].question);
+  // Hide next button when new question is unanswered
+  $("#nextButton").hide();
+};
 
-const showOptions = function(){
-    (quizContent[questionNumber].options).map((option) => {
-        $("#optionsContainer").append("<p  class='option'>" + option + "</p>")
-    })
-    // console.log(quizContent[questionNumber].options);
-}
+const showOptions = function () {
+  quizContent[questionNumber].options.map((option) => {
+    $("#optionsContainer").append("<p  class='option'>" + option + "</p>");
+  });
+};
 
 // function created to check answers
-const checkAnswer = function (selectedAnswer){
-    $("#optionsContainer").children("p").attr("class", "disabled-btn")
+const checkAnswer = function (selectedAnswer) {
+  $("#optionsContainer").children("p").hide();
 
-    $('#nextButton').show()
-    if (selectedAnswer === quizContent[questionNumber].correctAnswer ){
-        
-        console.log("correct anser");
-        // Updating Score
-        // score = ++score
-        $('#score').text(`Score - ${score}`)
-        $('#result').text('Well Done').attr("class", "correct")
-        // Updating CSS
-        
-    }
-    
-    else{
-        // console.log("wrong");
-        $('#result').text('Wrong').attr("class","wrong")
-        
-    }
-}
+  $("#nextButton").show();
+  if (selectedAnswer === quizContent[questionNumber].correctAnswer) {
+    console.log("correct anser");
+    // Updating Score
+    // score = ++score
+    $("#score").text(`Score - ${++score}`);
+    $("#optionsContainer")
+      .attr("class", "answer-msg")
+      .text(`Correct Answer: ${quizContent[questionNumber].correctAnswer}`);
+    // $("#optionsContainer").css(
+    //   "border-color",
+    //   "white",
+    //   "border-width",
+    //   " 2px 2px"
+    // );
 
-const nextQuestion = function (){
-    if(quizContent.length-1 === questionNumber) {
-        gameOver()
-    } else {
-        questionNumber = ++questionNumber;
-        showQuestion();
-        $("#optionsContainer").html("")
-        showOptions();
-        $('#optionsContainer').children("p").click(function () {
-            checkAnswer($(this).text())
-            
-        })
-        $('#result').text("")
-    }
-}
+    $("#result").text("Well Done !").attr("class", "correct");
+  } else {
+    $("#result").text("Wrong..").attr("class", "wrong");
+    $("#optionsContainer")
+      .attr("class", "answer-msg")
+      .text(`Correct Answer: ${quizContent[questionNumber].correctAnswer}`);
+  }
+};
+
+const nextQuestion = function () {
+  if (quizContent.length - 1 === questionNumber) {
+    gameOver();
+  } else {
+    questionNumber = ++questionNumber;
+    showQuestion();
+    $("#optionsContainer").html("");
+    showOptions();
+    $("#optionsContainer")
+      .children("p")
+      .click(function () {
+        checkAnswer($(this).text());
+      });
+    $("#result").text("");
+  }
+};
 
 // Game over function
 
-const gameOver = function (){
-    $('#finalMessage').text ('GAME OVER! - Try Again')
-    $("main").hide()
-    $("header").hide()
-    $("#finalScore").text(`Your Score is ${score}`)
-    $('#resetButton').show().click(function(){
-        resetGame()
-    })
-}
+const gameOver = function () {
+  $("#finalMessage").text("GAME OVER! - Try Again");
+  $("main").hide();
+  $("header").hide();
+  $("section").show();
+  $("#finalScore").text(`Your Score is ${score}`);
+  $("#resetButton")
+    .show()
+    .click(function () {
+      resetGame();
+    });
+};
 
-const resetGame = function(){
-    score = 0;
-    questionNumber= 0;
-    $('#nextButton').hide()
-    $('#finalMessage').text("")
-    $("#finalScore").text("")
-    $("#resetButton").hide()
-    $('main').show();
-    $('#score').text(`Score - ${score}`)
-    showQuestion();
+const resetGame = function () {
+  score = 0;
+  questionNumber = 0;
+  $("#nextButton").hide();
+  $("#finalMessage").text("");
+  $("#finalScore").text("");
+  $("#resetButton").hide();
+  $("main").show();
+  $("#score").text(`Score - ${score}`);
+  showQuestion();
 
-    $('#optionsContainer').html("")
-    showOptions();
-    $('#result').text("")
-    $('#optionsContainer').children("p").click(function () {
-        checkAnswer($(this).text())
-    })
-    if(questionNumber === quizContent.length-1) {
-        gameOver()
-    }
-}
-
+  $("#optionsContainer").html("");
+  showOptions();
+  $("#result").text("");
+  $("#optionsContainer")
+    .children("p")
+    .click(function () {
+      checkAnswer($(this).text());
+    });
+  if (questionNumber === quizContent.length - 1) {
+    gameOver();
+  }
+};
 
 $(function () {
-    $('main').hide(); 
-    $('#resetButton').hide();
-    $('#startQuiz').on('click',function() {
-        $('#nextButton').hide()
-        $('.headerContainer').remove();
-        $('header').remove();
-        $('main').show();
-        $('#score').text(`Score - ${score}`)
-        showQuestion();
-        showOptions();
+  $("main").hide();
+  $("section").hide();
+  $("#resetButton").hide();
+  $("#startQuiz").on("click", function () {
+    $("#nextButton").hide();
+    $(".headerContainer").remove();
+    $("header").remove();
+    $("main").show();
+    $("#score").text(`Score - ${score}`);
+    showQuestion();
+    showOptions();
 
-        // we are selecting all the elements within the OptionsContainer div
-        
-        $('#optionsContainer').children("p").click(function(){
-            checkAnswer($(this).text())
-        })
+    // we are selecting all the elements within the OptionsContainer div
 
-        $('#nextButton').click(function () {
-            nextQuestion();
-        })   
-         
-        })
+    $("#optionsContainer")
+      .children("p")
+      .click(function () {
+        checkAnswer($(this).text());
+      });
 
-    })
-
-
-
-
-
-
+    $("#nextButton").click(function () {
+      nextQuestion();
+    });
+  });
+});

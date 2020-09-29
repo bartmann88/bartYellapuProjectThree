@@ -1,39 +1,350 @@
-h3 {
-  color: darkslategray;
-  font-family: 'IM Fell English', serif;
-  font-size: 30px;
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
-.option {
-  color: black;
-  width: 10%;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-family: 'Piedra', cursive;
-  text-align: center;
-}
-
-.correct {
-  color: greenyellow;
-  font-family: 'IM Fell English', serif;
-  font-size: 50px;
-  font-weight: 900;
-}
-
-.wrong {
-  color: crimson;
-  font-family: 'IM Fell English', serif;
-  font-size: 50px;
-  font-weight: 900;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 body {
-  background-color: black;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+  max-width: 100%;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+
+figure {
+  margin: 0;
+}
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button,
+input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+html,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
 }
 
 header {
-  background-image: url(../assets/images/landingBackground.jpg);
-  background-size: cover;
+  background-image: url(../assets/images/svg/LOTR10.svg);
+  background-color: black;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,7 +355,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 90vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .headerContainer {
@@ -60,14 +376,15 @@ header {
           align-items: center;
   text-align: center;
   width: 60%;
-  margin-top: 15%;
+  margin-top: 8rem;
 }
 
 .heading {
   margin-bottom: 25px;
-  font-family: 'IM Fell English', serif;
-  font-size: 50px;
-  color: #e8b923;
+  font-family: "IM Fell English", serif;
+  font-size: 60px;
+  font-weight: 900;
+  color: #c4b479;
 }
 
 .landingText {
@@ -78,21 +395,21 @@ header {
 .buttonStart {
   text-decoration: none;
   font-size: 2rem;
-  background-color: silver;
-  padding: 4px 20px;
-  border-radius: 10px;
-  font-family: 'Piedra', cursive;
+  background-color: transparent;
+  border: solid 0.25rem #f5142e;
+  padding: 0.75rem 2.5rem;
+  border-radius: 20px;
+  font-family: "Piedra", cursive;
+  cursor: pointer;
+}
+
+.buttonStart:visited {
+  color: whitesmoke;
 }
 
 .buttonStart:hover {
-  color: white;
-}
-
-.disabled-btn {
-  pointer-events: none;
-  opacity: 0.5;
-  color: white;
-  width: 30%;
+  color: #f5142e;
+  border: solid 0.25rem whitesmoke;
 }
 
 main {
@@ -106,12 +423,75 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  background-image: url(../assets/images/7z6cSaI-lord-of-the-rings-wallpaper-hd.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 95vh;
+  height: 100vh;
+  background-color: #b9a37e;
+}
+
+.quiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 50%;
+  padding: 3rem 6rem 2rem 6rem;
+  background-color: #82a775;
+  border-radius: 8rem;
+  -webkit-box-shadow: 5px 10px #6a967d;
+          box-shadow: 5px 10px #6a967d;
+}
+
+h3 {
+  color: darkslategray;
+  font-family: "IM Fell English", serif;
+  font-size: 45px;
+  padding-bottom: 1.25rem;
+  font-weight: bolder;
+}
+
+.option {
+  color: black;
+  font-size: 30px;
+  font-weight: normal;
+  width: 100%;
+  font-family: "Piedra", cursive;
+  text-align: center;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+p.option:hover {
+  font-size: larger;
+  color: whitesmoke;
+}
+
+.correct {
+  color: #2fff40;
+  font-family: "Piedra", cursive;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.wrong {
+  color: crimson;
+  font-family: "Piedra", cursive;
+  font-size: 50px;
+  font-weight: normal;
 }
 
 .optionsContainer {
@@ -131,10 +511,59 @@ main {
 .optionsContainer p {
   cursor: pointer;
   text-align: center;
-  padding: 2px;
+  padding-top: 1rem;
 }
 
-.resultPage {
+.answer-msg {
+  color: whitesmoke;
+  font-family: "Bilbo", cursive;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.nextBtn {
+  background-color: #f5142e;
+  width: 12rem;
+  border-radius: 10px;
+  border: none;
+  color: whitesmoke;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  font-family: "Piedra", cursive;
+}
+
+.nextBtn:hover {
+  background-color: transparent;
+  border: solid 3px #c4b479;
+  color: #f5142e;
+  font-size: 2.25rem;
+}
+
+.scoreContainer {
+  padding: 1.5rem;
+}
+
+.scoreContainer .score {
+  color: black;
+  font-family: "bilbo";
+  font-weight: 900;
+  font-size: 50px;
+  padding-top: 0.5rem;
+}
+
+section {
+  background-image: url(../assets/images/middle-earth-map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -145,14 +574,13 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-}
-
-.quiz {
+.resultContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,15 +588,17 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 75%;
-  background-color: gainsboro;
-  padding-bottom: 2%;
-  margin-top: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 30%;
+  width: 50%;
+  background-color: lightblue;
 }
 
-.score {
-  color: floralwhite;
-  font-family: 'bilbo';
-  font-weight: 900;
-  font-size: 30px;
+.finalMessage {
+  color: black;
 }

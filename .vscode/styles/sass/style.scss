@@ -4,149 +4,208 @@
 // font-family: 'Bilbo', cursive;
 // font-family: 'IM Fell English', serif;
 // font-family: 'Piedra', cursive;
-h3{
-    color: darkslategray;
-    font-family: 'IM Fell English', serif;
-    font-size: 30px;
-    
 
+// Landing Page //
+header {
+  background-image: url(../assets/images/svg/LOTR10.svg);
+  background-color: black;
+  background-size: contain;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex-wrap: wrap;
 }
 
-.option{
-
-    color: black;
-    width: 10%;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-family: 'Piedra', cursive;
-    text-align: center;
-    
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  margin-top: 8rem;
 }
+
+.heading {
+  margin-bottom: 25px;
+  font-family: "IM Fell English", serif;
+  font-size: 60px;
+  font-weight: 900;
+  color: #c4b479;
+}
+
+.landingText {
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.buttonStart {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: transparent;
+  border: solid 0.25rem #f5142e;
+  padding: 0.75rem 2.5rem;
+  border-radius: 20px;
+  font-family: "Piedra", cursive;
+  cursor: pointer;
+}
+
+.buttonStart:visited {
+  color: whitesmoke;
+}
+.buttonStart:hover {
+  color: #f5142e;
+  border: solid 0.25rem whitesmoke;
+}
+
+// Quiz Page //
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  background-color: #b9a37e;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+  padding: 3rem 6rem 2rem 6rem;
+  background-color: #82a775;
+  border-radius: 8rem;
+  box-shadow: 5px 10px #6a967d;
+}
+
+h3 {
+  color: darkslategray;
+  font-family: "IM Fell English", serif;
+  font-size: 45px;
+  padding-bottom: 1.25rem;
+  font-weight: bolder;
+}
+
+.option {
+  color: black;
+  font-size: 30px;
+  font-weight: normal;
+  width: 100%;
+  font-family: "Piedra", cursive;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+p.option:hover {
+  font-size: larger;
+  color: whitesmoke;
+}
+
 .correct {
-    color: greenyellow;
-    font-family: 'IM Fell English', serif;
-    font-size: 50px;
-    font-weight: 900;
-
+  color: rgb(47, 255, 64);
+  font-family: "Piedra", cursive;
+  font-size: 50px;
+  font-weight: normal;
 }
 .wrong {
-    color: crimson;
-    font-family: 'IM Fell English', serif;
-    font-size: 50px;
+  color: crimson;
+
+  font-family: "Piedra", cursive;
+  font-size: 50px;
+  font-weight: normal;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  p {
+    cursor: pointer;
+    text-align: center;
+    padding-top: 1rem;
+  }
+}
+
+.answer-msg {
+  color: whitesmoke;
+  font-family: "Bilbo", cursive;
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+.nextBtn {
+  background-color: #f5142e;
+  width: 12rem;
+  border-radius: 10px;
+  border: none;
+  color: whitesmoke;
+  padding: 0.25rem;
+  margin-top: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  transition: 0.25s;
+  transition-timing-function: ease-out;
+  font-family: "Piedra", cursive;
+}
+
+.nextBtn:hover {
+  background-color: transparent;
+  border: solid 3px #c4b479;
+  color: #f5142e;
+  font-size: 2.25rem;
+}
+
+.scoreContainer {
+  padding: 1.5rem;
+
+  .score {
+    color: black;
+    font-family: "bilbo";
     font-weight: 900;
-
-}
-
-body {
-    
-    background-color: black;
-
-}
-
-header{
-    background-image: url(../assets/images/landingBackground.jpg);
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 90vh;
-    
-}
-
-.headerContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 60%;
-    margin-top: 15%;
-}
-
-.heading{
-    margin-bottom: 25px;
-    font-family:'IM Fell English', serif;
     font-size: 50px;
-    color: #e8b923 ;
+    padding-top: 0.5rem;
+  }
 }
 
-.landingText{
-    margin-bottom: 50px;
-    
-    font-size: 20px;
+// Result Page //
+
+section {
+  background-image: url(../assets/images/middle-earth-map.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.buttonStart{
-    text-decoration: none;
-    font-size: 2rem;
-    background-color: silver;
-    padding: 4px 20px;
-    border-radius: 10px;
-    font-family:'Piedra', cursive ;
+.resultContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  width: 50%;
+  background-color: lightblue;
 }
 
-.buttonStart:hover{
-    color: white;
+.finalMessage {
+  color: black;
 }
-
-
-.disabled-btn {
-  pointer-events: none;
-  opacity: 0.5;
-  color: white;
-  width: 30%;
-}
-
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-image: url(../assets/images/7z6cSaI-lord-of-the-rings-wallpaper-hd.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 95vh;
- 
-}
-
-.optionsContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    
-
-    p{
-        cursor: pointer;
-        text-align: center;
-        padding: 2px;
-    }
-}
-
-.resultPage{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-footer{
-    position: absolute;
-    bottom: 0;
-}
-
-.quiz{
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    background-color: gainsboro;
-    padding-bottom: 2% ;
-    margin-top: 10%;
-}
-
-.score{
-    color: floralwhite;
-    font-family: 'bilbo';
-    font-weight: 900;
-    font-size: 30px;
-}
-
