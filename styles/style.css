@@ -339,12 +339,12 @@ textarea {
 }
 
 header {
-  background-image: url(../assets/images/svg/LOTR10.svg);
+  background-image: url(../assets/images/svg/lotr2/LOTR10.png);
   background-color: black;
   background-size: contain;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: 50% 100%;
+  background-position: center center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,6 +381,7 @@ header {
 
 .heading {
   margin-bottom: 25px;
+  margin-top: 3rem;
   font-family: "IM Fell English", serif;
   font-size: 60px;
   font-weight: 900;
@@ -476,7 +477,7 @@ h3 {
 }
 
 p.option:hover {
-  font-size: larger;
+  font-size: 3rem;
   color: whitesmoke;
 }
 
@@ -595,7 +596,7 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
   height: 30%;
-  width: 50%;
+  width: 40%;
   background-color: #7395a0;
   opacity: 0.6;
   border: solid 2px darkslategray;

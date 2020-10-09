@@ -55,6 +55,20 @@ const quizContent = [
   },
 ];
 
+// create an images array
+
+const backgroungImg = [
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr1/LOTR2.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr1/LOTR3.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr1/LOTR4.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr1/LOTR5.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr2/LOTR6.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr2/LOTR7.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr2/LOTR8.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr2/LOTR9.svg",
+  "C:UsersBartmanDocumentsWebsitespersonal-projectsJunoweek-4BartYellapuProjectThreeassetsimagessvglotr3/LOTR11.svg",
+];
+
 // •	Landing page will have a heading and, description of the quiz and a challenge message
 // •	“Start Quiz “ Button will start the quiz and hide the landing page
 // •	Clicking on an answer will indicate correct / wrong, update score
