@@ -93,7 +93,6 @@ let score = 0;
 
 const showQuestion = function () {
   $("#question").text(quizContent[questionNumber].question);
-  // console.log(quizContent[questionNumber].question);
   // Hide next button when new question is unanswered
   $("#nextButton").hide();
 };
@@ -113,16 +112,10 @@ const checkAnswer = function (selectedAnswer) {
     console.log("correct anser");
     // Updating Score
     // score = ++score
-    $("#score").text(`Score - ${++score}`);
+    $("#score").text(`Score - ${++score}/8`);
     $("#optionsContainer")
       .attr("class", "answer-msg")
       .text(`Correct Answer: ${quizContent[questionNumber].correctAnswer}`);
-    // $("#optionsContainer").css(
-    //   "border-color",
-    //   "white",
-    //   "border-width",
-    //   " 2px 2px"
-    // );
 
     $("#result").text("Well Done !").attr("class", "correct");
   } else {
@@ -150,6 +143,8 @@ const nextQuestion = function () {
   }
 };
 
+// Question Counter function
+
 // Game over function
 
 const gameOver = function () {
@@ -157,7 +152,7 @@ const gameOver = function () {
   $("main").hide();
   $("header").hide();
   $("section").show();
-  $("#finalScore").text(`Your Score is ${score}`);
+  $("#finalScore").text(`Your Score is ${score}/8`);
   $("#resetButton")
     .show()
     .click(function () {
@@ -173,7 +168,7 @@ const resetGame = function () {
   $("#finalScore").text("");
   $("#resetButton").hide();
   $("main").show();
-  $("#score").text(`Score - ${score}`);
+  $("#score").text(`Score - ${score}/8`);
   showQuestion();
 
   $("#optionsContainer").html("");
@@ -198,7 +193,7 @@ $(function () {
     $(".headerContainer").remove();
     $("header").remove();
     $("main").show();
-    $("#score").text(`Score - ${score}`);
+    $("#score").text(`Score - ${score}/8`);
     showQuestion();
     showOptions();
 
